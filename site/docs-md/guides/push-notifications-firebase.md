@@ -95,7 +95,7 @@ ngOnInit() {
     // Request permission to use push notifications
     // iOS will prompt user and return if they granted permission or not
     // Android will just grant without prompting
-    PushNotifications.requestPermission().then( result => {
+    PushNotifications.requestPermissions().then( result => {
       if (result.granted) {
         // Register with Apple / Google to receive push via APNS/FCM
         PushNotifications.register();
@@ -161,7 +161,7 @@ export class HomePage implements OnInit {
     // Request permission to use push notifications
     // iOS will prompt user and return if they granted permission or not
     // Android will just grant without prompting
-    PushNotifications.requestPermission().then( result => {
+    PushNotifications.requestPermissions().then( result => {
       if (result.granted) {
         // Register with Apple / Google to receive push via APNS/FCM
         PushNotifications.register();
